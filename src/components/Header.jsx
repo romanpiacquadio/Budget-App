@@ -1,13 +1,14 @@
-import React from 'react'
-import NewBudget from './NewBudget'
+import React from 'react';
+import NewBudget from './NewBudget';
+import BudgetControl from './BudgetControl';
 
-const Header = ({ budget, setBudget, validBudget, setValidBudget}) => {
+const Header = ({ expenses, setExpenses, budget, setBudget, validBudget, setValidBudget}) => {
   return (
     <header>
         <h1>Expense controller</h1>
         
         {validBudget ? (
-            <p>Control Presupuesto</p>
+            <BudgetControl budget={budget} setBudget={setBudget} expenses={expenses} setExpenses={setExpenses} setValidBudget={setValidBudget}/>
         ) : (
             <NewBudget budget={budget} setBudget={setBudget} setValidBudget={setValidBudget}/>
         )}

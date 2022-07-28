@@ -1,5 +1,5 @@
-import React, {useState} from 'react'
-import Message from './Message'
+import React, {useState} from 'react';
+import Message from './Message';
 
 const NewBudget = ({ budget, setBudget, setValidBudget}) => {
     
